@@ -1,0 +1,17 @@
+{
+  "name": "AluraGram",
+  "displayName": "AluraGram",
+  "expo": {
+    "name": "AluraGram",
+    "slug": "AluraGram",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
