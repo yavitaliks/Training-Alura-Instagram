@@ -9,7 +9,6 @@ import { likeFoto } from "../../api/curtidas";
 import { adicionarComentario } from "../../api/comentarios";
 
 export default function Feed(props) {
-  console.log("FFFFFFEEEEEDDDDDD", props);
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
