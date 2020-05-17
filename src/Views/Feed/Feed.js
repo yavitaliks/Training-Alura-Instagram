@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { ScrollView, FlatList, StatusBar } from "react-native";
+import { ScrollView, FlatList, StatusBar, Text } from "react-native";
 
 import { Cabecalho } from "../../Componentes/Cabecalho";
 import { Fotos } from "../../Componentes/Foto";
@@ -35,6 +35,7 @@ export default function Feed(props) {
               urlAvatar={item.userURL}
               adicionarComentario={adicionarComentario}
             />
+            <Text>{item.userURL}</Text>
           </Fragment>
         )}
       />

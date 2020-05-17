@@ -15,9 +15,10 @@ export default function Login(props) {
   async function logIn() {
     try {
       const response = await api.post("users/login", data);
+      console.log("TOOOKEEEN", response.headers.x_access_token);
       await AsyncStorage.setItem("token", response.headers.x_access_token);
       await AsyncStorage.setItem("username", response.data.name);
-      props.navigation.replace("Feed", { nome: response.data.name });
+      props.navigation.replace("Home", { nome: response.data.name });
     } catch (error) {
       console.warn(error);
     }
