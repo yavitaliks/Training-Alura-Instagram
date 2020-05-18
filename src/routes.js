@@ -7,6 +7,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import Login from "./Views/Login/Login";
 import Feed from "./Views/Feed/Feed";
 import Cadastro from "./Views/Cadastro/Cadastro";
+import NewPost from "./Views/Fotos/AddFotos";
 
 // You can import Ionicons from @expo/vector-icons/Ionicons if you use Expo or
 // react-native-vector-icons/Ionicons otherwise.
@@ -36,12 +37,12 @@ export default function Routes(props) {
             tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
-              if (route.name === "Feed") {
-                iconName = focused
-                  ? "ios-information-circle"
-                  : "ios-information-circle-outline";
-              } else if (route.name === "Cadastro") {
+              if (route.name === "New Post") {
+                iconName = focused ? "md-add" : "md-add";
+              } else if (route.name === "Feed") {
                 iconName = focused ? "ios-list-box" : "ios-list";
+              } else if (route.name === "LogOut") {
+                iconName = focused ? "ios-log-out" : "ios-log-out";
               }
 
               // You can return any component that you like here!
@@ -62,7 +63,14 @@ export default function Routes(props) {
             }}
           />
           <Tab.Screen
-            name="Cadastro"
+            name="New Post"
+            component={NewPost}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Tab.Screen
+            name="LogOut"
             component={MyTabs}
             options={{
               headerShown: false,

@@ -14,7 +14,7 @@ export default function Cadastro() {
   async function addNewUser() {
     try {
       const response = await api.post("users/signup", data);
-      console.warn("AAAAAAAAA", response);
+      console.warn("AAAAAAAAA", response.data);
     } catch (error) {
       console.log(error);
     }
