@@ -8,6 +8,7 @@ import Login from "./Views/Login/Login";
 import Feed from "./Views/Feed/Feed";
 import Cadastro from "./Views/Cadastro/Cadastro";
 import NewPost from "./Views/Fotos/AddFotos";
+import Perfil from "./Views/Perfil/Perfil";
 
 // You can import Ionicons from @expo/vector-icons/Ionicons if you use Expo or
 // react-native-vector-icons/Ionicons otherwise.
@@ -41,8 +42,8 @@ export default function Routes(props) {
                 iconName = focused ? "md-add" : "md-add";
               } else if (route.name === "Feed") {
                 iconName = focused ? "ios-list-box" : "ios-list";
-              } else if (route.name === "LogOut") {
-                iconName = focused ? "ios-log-out" : "ios-log-out";
+              } else if (route.name === "Perfil") {
+                iconName = focused ? "md-person" : "md-person";
               }
 
               // You can return any component that you like here!
@@ -50,7 +51,7 @@ export default function Routes(props) {
             },
           })}
           tabBarOptions={{
-            activeTintColor: "tomato",
+            activeTintColor: "#836FFF",
             inactiveTintColor: "gray",
           }}
         >
@@ -70,8 +71,8 @@ export default function Routes(props) {
             }}
           />
           <Tab.Screen
-            name="LogOut"
-            component={MyTabs}
+            name="Perfil"
+            component={Perfil}
             options={{
               headerShown: false,
             }}
